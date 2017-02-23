@@ -3,7 +3,6 @@ var arabicNumber = 0;
 var romanNumber = "";
 var arabicHash = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 var romanHash = ["\u2181", "M\u2181", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
-
 var romanNumberConverter = function(arabicNumber, n) {
   if (arabicNumber === 0) {
     return romanNumber;
@@ -17,9 +16,7 @@ var romanNumberConverter = function(arabicNumber, n) {
   }
   return romanNumber;
 };
-
 // Front end logic
-
 $(function() {
   $("form#userInput").submit(function(event){
     event.preventDefault();

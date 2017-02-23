@@ -4,12 +4,58 @@ var arabicNumber = 0;
 var romanNumber = "";
 
 var romanNumberConverter = function(arabicNumber) {
-  if (arabicNumber > 99) {
+  if (arabicNumber > 999) {
+    thousandsConverter(arabicNumber);
+  } else if (arabicNumber > 99) {
     hundredsConverter(arabicNumber);
   } else if (arabicNumber > 9) {
     tensConverter(arabicNumber);
   } else {
     onesConverter(arabicNumber);
+  }
+  return romanNumber;
+};
+
+var thousandsConverter = function(arabicNumber) {
+  // if (arabicNumber >= 900) {
+  //   romanNumber = romanNumber.concat("CM");
+  //   arabicNumber -= 900;
+  //   tensConverter(arabicNumber);
+  // } else if (arabicNumber >= 800) {
+  //   romanNumber = romanNumber.concat("DCCC");
+  //   arabicNumber -= 800;
+  //   tensConverter(arabicNumber);
+  // } else if (arabicNumber >= 700) {
+  //   romanNumber = romanNumber.concat("DCC");
+  //   arabicNumber -= 700;
+  //   tensConverter(arabicNumber);
+  // } else if (arabicNumber >= 600) {
+  //   romanNumber = romanNumber.concat("DC");
+  //   arabicNumber -= 600;
+  //   tensConverter(arabicNumber);
+  // } else if (arabicNumber >= 500) {
+  //   romanNumber = romanNumber.concat("D");
+  //   arabicNumber -= 500;
+  //   tensConverter(arabicNumber);
+  // } else if (arabicNumber >= 400) {
+  //   romanNumber = romanNumber.concat("CD");
+  //   arabicNumber -= 400;
+  //   tensConverter(arabicNumber);
+  // } else
+  if (arabicNumber >= 3000) {
+    romanNumber = romanNumber.concat("MMM");
+    arabicNumber -= 3000;
+    hundredsConverter(arabicNumber);
+  } else if (arabicNumber >= 2000) {
+    romanNumber = romanNumber.concat("MM");
+    arabicNumber -= 2000;
+    hundredsConverter(arabicNumber);
+  } else if (arabicNumber >= 1000) {
+    romanNumber = romanNumber.concat("M");
+    arabicNumber -= 1000;
+    hundredsConverter(arabicNumber);
+  } else {
+    hundredsConverter(arabicNumber);
   }
   return romanNumber;
 };

@@ -9,18 +9,21 @@
   </head>
   <body>
     <div class="container">
-      <form id="userInput">
-        <div class="form-group">
-          <label for="numberInput">Input a number:</label>
-          <input type="text" id="numberInput" class="form-control">
-        </div>
-        <button type="submit" name="button" class="btn">Submit</button>
-      </form>
-    </div>
-    <div class="answer">
-      <p>
-        <span id="arabicNumber"></span> = <span id="romanNumber"></span>
-      </p>
+      <div class="well">
+        <form id="userInput">
+          <div class="form-group">
+            <label for="numberInput">INPVT A NVMBER:</label>
+            <input type="number" id="numberInput" class="form-control">
+          </div>
+          <p id="errorFeedback">YOV MVST ENTER A NVMBER!!!</p>
+          <button type="submit" name="button" class="btn">SVBMIT</button>
+        </form>
+        <div class="answer">
+          <p>
+            <span id="arabicNumber"></span> = <span id="romanNumber"></span>
+          </p>
+        </div>        
+      </div>
     </div>
   </body>
 </html>

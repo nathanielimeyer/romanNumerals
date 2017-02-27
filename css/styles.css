@@ -8,7 +8,7 @@ body {
   background-color: #ccc;
 }
 
-.answer, #errorFeedback {
+p {
   display: none;
 }
 
@@ -17,4 +17,14 @@ body {
   background-color: inherit;
   text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
   border: none;
+}
+
+.btn {
+  background-color: inherit;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #555;
+  box-shadow:  0px 1px 0px rgba(255,255,255,.5);
+  font-size: 50px;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.5);
 }
